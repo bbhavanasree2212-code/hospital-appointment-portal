@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarePlus Hospital | Appointment Portal</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f3f7fb;
+            color: #243247;
+        }
+        header {
+            background: #087e8b;
+            color: white;
+            padding: 24px 8%;
+        }
+        header h1 { margin: 0 0 8px; }
+        nav {
+            background: #06636e;
+            padding: 12px 8%;
+        }
+        nav a {
+            color: white;
+            margin-right: 22px;
+            text-decoration: none;
+        }
+        main {
+            max-width: 1100px;
+            margin: 28px auto;
+            padding: 0 18px;
+        }
+        .banner {
+            background: #d8f3f0;
+            border-left: 5px solid #087e8b;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .doctors {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 18px;
+            margin: 20px 0;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 3px 12px #17324d12;
+        }
+        .card h3 { color: #087e8b; margin-top: 0; }
+        .slot {
+            display: inline-block;
+            background: #e0f2fe;
+            color: #075985;
+            border-radius: 5px;
+            padding: 7px 10px;
+            margin: 4px;
+        }
+        .announcement {
+            background: #fff3cd;
+            padding: 16px;
+            border-radius: 8px;
+        }
+        footer {
+            background: #243247;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 36px;
+        }
+        @media (max-width: 600px) {
+            header, nav { padding-left: 5%; padding-right: 5%; }
+            nav a { display: inline-block; margin: 5px 10px 5px 0; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CarePlus Hospital</h1>
+        <p>Your health, our priority — trusted care for every family.</p>
+    </header>
+
+    <nav>
+        <a href="#doctors">Our Doctors</a>
+        <a href="#appointments">Appointment Slots</a>
+        <a href="#announcements">Announcements</a>
+    </nav>
+
+    <main>
+        <section class="banner">
+            <h2>Welcome to the Online Appointment Portal</h2>
+            <p>Explore our medical specialists and check the listed consultation times.</p>
+        </section>
+
+        <section id="doctors">
+            <h2>Our Doctors</h2>
+            <div class="doctors">
+                <article class="card">
+                    <h3>Dr. Ananya Sharma</h3>
+                    <p><strong>Specialization:</strong> Cardiology</p>
+                    <p><strong>Experience:</strong> 12 years</p>
+                    <p><strong>Consultation:</strong> Mon–Fri, 9 AM–1 PM</p>
+                </article>
+                <article class="card">
+                    <h3>Dr. Rahul Menon</h3>
+                    <p><strong>Specialization:</strong> Pediatrics</p>
+                    <p><strong>Experience:</strong> 10 years</p>
+                    <p><strong>Consultation:</strong> Mon–Sat, 10 AM–2 PM</p>
+                </article>
+                <article class="card">
+                    <h3>Dr. Priya Nair</h3>
+                    <p><strong>Specialization:</strong> Dermatology</p>
+                    <p><strong>Experience:</strong> 8 years</p>
+                    <p><strong>Consultation:</strong> Tue–Sat, 2 PM–6 PM</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="appointments" class="card">
+            <h2>Available Appointment Slots</h2>
+            <p>Cardiology: <span class="slot">9:00 AM</span>
+                <span class="slot">10:30 AM</span></p>
+            <p>Pediatrics: <span class="slot">10:00 AM</span>
+                <span class="slot">11:30 AM</span></p>
+            <p>Dermatology: <span class="slot">2:00 PM</span>
+                <span class="slot">3:30 PM</span></p>
+            <p>These are demonstration slots, not live bookings.</p>
+        </section>
+
+        <section id="announcements" class="announcement">
+            <h2>Hospital Announcements</h2>
+            <p>Free general health screening camp this Saturday, 9 AM–12 PM.</p>
+            <p>Emergency services are available 24 hours a day.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CarePlus Hospital | Online Appointment Portal</p>
+    </footer>
+</body>
+</html>
