@@ -1,145 +1,113 @@
-
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CarePlus Hospital | Appointment Portal</title>
-    <style>
-        * { box-sizing: border-box; }
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f3f7fb;
-            color: #243247;
-        }
-        header {
-            background: #087e8b;
-            color: white;
-            padding: 24px 8%;
-        }
-        header h1 { margin: 0 0 8px; }
-        nav {
-            background: #06636e;
-            padding: 12px 8%;
-        }
-        nav a {
-            color: white;
-            margin-right: 22px;
-            text-decoration: none;
-        }
-        main {
-            max-width: 1100px;
-            margin: 28px auto;
-            padding: 0 18px;
-        }
-        .banner {
-            background: #d8f3f0;
-            border-left: 5px solid #087e8b;
-            padding: 20px;
-            border-radius: 8px;
-        }
-        .doctors {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 18px;
-            margin: 20px 0;
-        }
-        .card {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 3px 12px #17324d12;
-        }
-        .card h3 { color: #087e8b; margin-top: 0; }
-        .slot {
-            display: inline-block;
-            background: #e0f2fe;
-            color: #075985;
-            border-radius: 5px;
-            padding: 7px 10px;
-            margin: 4px;
-        }
-        .announcement {
-            background: #fff3cd;
-            padding: 16px;
-            border-radius: 8px;
-        }
-        footer {
-            background: #243247;
-            color: white;
-            text-align: center;
-            padding: 18px;
-            margin-top: 36px;
-        }
-        @media (max-width: 600px) {
-            header, nav { padding-left: 5%; padding-right: 5%; }
-            nav a { display: inline-block; margin: 5px 10px 5px 0; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hospital Appointment Portal</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f3f8fc;color:#243447}
+header{background:#087f8c;color:white;padding:22px 8%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+header h1{margin:0;font-size:25px}
+header p{margin:6px 0 0}
+nav a{color:white;text-decoration:none;margin-left:18px;font-weight:bold}
+.hero{background:linear-gradient(120deg,#087f8c,#16a6a1);color:white;padding:55px 8%;text-align:center}
+.hero h2{font-size:36px;margin:0 0 14px}
+.hero p{font-size:18px;line-height:1.6}
+main{max-width:1100px;margin:30px auto;padding:0 20px}
+h2.section-title{color:#087f8c;margin-top:36px}
+.doctors{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:white;padding:22px;border-radius:12px;box-shadow:0 3px 14px #17324d12}
+.avatar{font-size:42px}
+.card h3{margin:10px 0 6px}
+.specialty{color:#087f8c;font-weight:bold}
+.slot{display:inline-block;background:#e0f5f1;color:#076b64;padding:7px 10px;border-radius:6px;margin:4px 3px 0 0;font-size:13px}
+.announcement{background:#fff8e5;border-left:5px solid #e7a927;padding:18px;margin:12px 0;border-radius:5px}
+.booking{background:white;padding:24px;border-radius:12px;box-shadow:0 3px 14px #17324d12}
+label{display:block;margin:12px 0 5px;font-weight:bold}
+input,select{width:100%;padding:12px;border:1px solid #ccd6df;border-radius:6px}
+button{background:#087f8c;color:white;padding:12px 20px;border:0;border-radius:6px;margin-top:16px;cursor:pointer;font-weight:bold}
+footer{background:#17324d;color:white;text-align:center;padding:22px;margin-top:40px}
+</style>
 </head>
 <body>
-    <header>
-        <h1>CarePlus Hospital</h1>
-        <p>Your health, our priority — trusted care for every family.</p>
-    </header>
+<header>
+  <div>
+    <h1>CarePlus Hospital</h1>
+    <p>Online Hospital Appointment Portal</p>
+  </div>
+  <nav><a href="#doctors">Our Doctors</a><a href="#booking">Book Appointment</a><a href="#news">Announcements</a></nav>
+</header>
 
-    <nav>
-        <a href="#doctors">Our Doctors</a>
-        <a href="#appointments">Appointment Slots</a>
-        <a href="#announcements">Announcements</a>
-    </nav>
+<section class="hero">
+  <h2>Your Health, Our Priority</h2>
+  <p>Find the right specialist, check consultation timings, and request an appointment.<br>Quality care starts with a simple step.</p>
+</section>
 
-    <main>
-        <section class="banner">
-            <h2>Welcome to the Online Appointment Portal</h2>
-            <p>Explore our medical specialists and check the listed consultation times.</p>
-        </section>
+<main>
+  <h2 class="section-title" id="doctors">Meet Our Doctors</h2>
+  <div class="doctors">
+    <article class="card">
+      <div class="avatar">👩‍⚕️</div>
+      <h3>Dr. Meera Nair</h3>
+      <p class="specialty">Cardiology</p>
+      <p>Consultation: Monday–Friday, 9:00 AM–1:00 PM</p>
+      <p>Available slots:</p>
+      <span class="slot">9:00 AM</span><span class="slot">10:00 AM</span><span class="slot">11:30 AM</span>
+    </article>
+    <article class="card">
+      <div class="avatar">👨‍⚕️</div>
+      <h3>Dr. Arjun Rao</h3>
+      <p class="specialty">Neurology</p>
+      <p>Consultation: Monday–Saturday, 10:00 AM–2:00 PM</p>
+      <p>Available slots:</p>
+      <span class="slot">10:00 AM</span><span class="slot">11:00 AM</span><span class="slot">1:00 PM</span>
+    </article>
+    <article class="card">
+      <div class="avatar">👩‍⚕️</div>
+      <h3>Dr. Sara Joseph</h3>
+      <p class="specialty">Pediatrics</p>
+      <p>Consultation: Monday–Friday, 2:00 PM–6:00 PM</p>
+      <p>Available slots:</p>
+      <span class="slot">2:00 PM</span><span class="slot">3:30 PM</span><span class="slot">5:00 PM</span>
+    </article>
+  </div>
 
-        <section id="doctors">
-            <h2>Our Doctors</h2>
-            <div class="doctors">
-                <article class="card">
-                    <h3>Dr. Ananya Sharma</h3>
-                    <p><strong>Specialization:</strong> Cardiology</p>
-                    <p><strong>Experience:</strong> 12 years</p>
-                    <p><strong>Consultation:</strong> Mon–Fri, 9 AM–1 PM</p>
-                </article>
-                <article class="card">
-                    <h3>Dr. Rahul Menon</h3>
-                    <p><strong>Specialization:</strong> Pediatrics</p>
-                    <p><strong>Experience:</strong> 10 years</p>
-                    <p><strong>Consultation:</strong> Mon–Sat, 10 AM–2 PM</p>
-                </article>
-                <article class="card">
-                    <h3>Dr. Priya Nair</h3>
-                    <p><strong>Specialization:</strong> Dermatology</p>
-                    <p><strong>Experience:</strong> 8 years</p>
-                    <p><strong>Consultation:</strong> Tue–Sat, 2 PM–6 PM</p>
-                </article>
-            </div>
-        </section>
+  <h2 class="section-title" id="booking">Request an Appointment</h2>
+  <form class="booking" onsubmit="event.preventDefault();document.getElementById('message').textContent='Demo request submitted! Please contact the hospital to confirm your appointment.';">
+    <label for="patient">Patient name</label>
+    <input id="patient" required placeholder="Enter your name">
+    <label for="doctor">Choose a specialist</label>
+    <select id="doctor" required>
+      <option value="">Select doctor</option>
+      <option>Dr. Meera Nair — Cardiology</option>
+      <option>Dr. Arjun Rao — Neurology</option>
+      <option>Dr. Sara Joseph — Pediatrics</option>
+    </select>
+    <label for="date">Preferred appointment date</label>
+    <input id="date" type="date" required>
+    <label for="time">Preferred time slot</label>
+    <select id="time" required>
+      <option value="">Select time</option>
+      <option>9:00 AM</option><option>10:00 AM</option>
+      <option>11:30 AM</option><option>1:00 PM</option>
+      <option>2:00 PM</option><option>3:30 PM</option><option>5:00 PM</option>
+    </select>
+    <button type="submit">Request Appointment</button>
+    <p id="message" role="status"></p>
+  </form>
 
-        <section id="appointments" class="card">
-            <h2>Available Appointment Slots</h2>
-            <p>Cardiology: <span class="slot">9:00 AM</span>
-                <span class="slot">10:30 AM</span></p>
-            <p>Pediatrics: <span class="slot">10:00 AM</span>
-                <span class="slot">11:30 AM</span></p>
-            <p>Dermatology: <span class="slot">2:00 PM</span>
-                <span class="slot">3:30 PM</span></p>
-            <p>These are demonstration slots, not live bookings.</p>
-        </section>
+  <h2 class="section-title" id="news">Hospital Announcements</h2>
+  <div class="announcement"><strong>Health Check-up Camp:</strong> Free blood pressure and general wellness screening this Saturday, 9 AM–12 PM.</div>
+  <div class="announcement"><strong>Appointment Reminder:</strong> Please arrive 15 minutes before your scheduled consultation.</div>
+  <div class="announcement"><strong>New Service:</strong> Pediatric consultation slots are now available on weekday afternoons.</div>
+</main>
 
-        <section id="announcements" class="announcement">
-            <h2>Hospital Announcements</h2>
-            <p>Free general health screening camp this Saturday, 9 AM–12 PM.</p>
-            <p>Emergency services are available 24 hours a day.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 CarePlus Hospital | Online Appointment Portal</p>
-    </footer>
+<footer>
+  <p>CarePlus Hospital | Online Hospital Appointment Portal</p>
+  <p>Emergency? Contact your local emergency service.</p>
+  <p>Demo website for a CI/CD project. Appointment requests are not stored or sent to a hospital.</p>
+</footer>
 </body>
 </html>
